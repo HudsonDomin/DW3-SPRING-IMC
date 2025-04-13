@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do peso</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        body{
+            background-color: rgb(234, 234, 234);
+        }
+        #card{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid rgb(167, 167, 167);
+            border-radius: 10px;
+            background-color: white;
+        }
+        #status-color{
+            background-color: rgb(223, 125, 50);
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+        }
+        #info{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: left;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <div id="status-color">
+            <h1>Obesidade 1</h1>
+        </div>
+        <div id="info">
+            <p style="text-align: center;">você está acima do peso ideal<p>
+            <br>
+            <p>
+                é recomendável manter uma dieta saudável, priorizando frutas, vegetais, proteínas magras e cereais integrais.
+                Além de fazer exercícios.
+            </p>
+            <p th:text="'IMC: '+ ${imc}"> </p>
+            <p th:text="'altura: '+ ${altura}"> </p>
+            <p th:text="'peso: '+ ${peso}"> </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -7,23 +7,23 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
     @Bean(name = "limiteAbaixoDoPeso")
     public double limiteAbaixoDoPeso(){
-        return 18,5
+        return 18.5;
     }
     @Bean(name = "limitePesoNormal")
     public double limitePesoNormal(){
-        return 24,9
+        return 24.9;
     }
     @Bean(name = "limiteSobrepeso")
     public double limiteSobrepeso(){
-        return 29,9
+        return 29.9;
     }
     @Bean(name = "limiteObesidade1")
     public double limiteObesidade1(){
-        return 34,9
+        return 34.9;
     }
     @Bean(name = "limiteObesidade2")
     public double limiteObesidade2(){
-        return 39.9
+        return 39.9;
     }
 
 }
