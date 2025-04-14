@@ -1,10 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Calculo de Imc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IMC</title>
+    <style>
+        /**{ padding: 0; }*/
+        body{ /*.inputOthers:focus ~ .inputCheck:checked{display: block;}*/
+            background-color: rgb(234, 234, 234);
+            font-family: Arial, Helvetica, sans-serif;
+            padding:0 !important;
+            align-items: center;
+        }
+        .box {
+            /*position: absolute;*/
+            background-color: white;
+            /*transform: translate(-50%, -50%);*/
+            padding: 15px;
+            border-radius: 15px;
+            margin: auto;
+            width: 600px;
+            /*top: 60%; left: 50%; width: 70%;*/
+        }
+        fieldset {color: white; border: 3px solid rgb(243, 172, 118); border-radius: 10px; }
+        legend { z-index: 1;
+            position: relative;
+            background-color: rgb(223, 125, 50);
+            border:1px solid rgb(223, 125, 50);
+            padding: 10px;
+            /*text-align: center;*/
+            border-radius: 8px;
+        }.inputBox { position: relative; color: rgb(223, 125, 50); }
+        .inputImc {
+            background: none; border: none;
+            border-bottom: 1px solid rgb(223, 125, 50);
+            outline: none;
+            color: rgb(223, 125, 50);
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }.inputImc::placeholder { text-align: end; }
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }.inputImc:focus ~ .labelInput,
+         .inputImc:valid ~ .labelInput{
+             top: -20px;
+             font-size: 12px;
+             color: rgb(223, 125, 50);
+         }
+        .path {
+            width: 20px;
+            height: 20px;
+            background-color: rgb(243, 172, 118);
+            border-radius: 20px;
+            text-align: center;
+            /*position: relative;*/
+        }.th-1{ animation: move 12s linear infinite; }
+        .th-2{ animation: move 15s linear infinite; }
+        .th-3{ animation: move 18s linear infinite; }
+        .rect-path { offset-path: rect(-20px auto auto auto );/* rect( <top> , <right> , <bottom> , <left> ) */ }
+        @keyframes move {
+            0% { offset-distance:   0%; }
+            100% { offset-distance: 100%; }
+        }
+        .btnCalcular{
+            margin: 10px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border-bottom: 3px solid rgb(171, 170, 196);
+            border-right: 3px solid rgb(197, 196, 238);
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            color: rgb(223, 125, 50);
+        }
+    </style>
 </head>
 <body>
-    <h1>Calculo IMC</h1>
+<div class="box">
+    <form method="POST" action="/imc">
+        <fieldset>
+            <legend><b>Calculadora de IMC</b></legend>
+            <br />
+            <!--<p>Está é uma calculadora de Indice de Massa Corporal com objetivo de alertar na possibilidade de risco a saúde. Para isso solicitamos os seguites valores: Altura e Peso. Que serão utilizados para calcular o IMC do usuário.</p>-->
+            <br />
+            <div class="inputBox">
+                <input type="text" id="peso" name="numPeso" class="inputImc" placeholder="Ex: 80.7" required/>
+                <label for="peso" class="labelInput">Insira o valor do seu peso: </label>
+            </div>
+            <br />
+            <br />
+            <div class="inputBox">
+                <input type="text" id="altura" name="numAltura" class="inputImc" placeholder="Ex: 1.80" required/>
+                <label for="altura" class="labelInput">Insira o valor da sua altura: </label>
+            </div>
+
+            <div class="path th-1 rect-path">&nbsp;</div><!-- → -->
+            <div class="path th-2 rect-path">&nbsp;</div><!-- → -->
+            <div class="path th-3 rect-path">&nbsp;</div><!-- → -->
+            <button type="submit" class="btnCalcular"><b>Calcular</b></button>
+        </fieldset>
+    </form>
+</div>
+<script>
+    let putImc = windows.document.getElementByClassName("inputImc");
+    putImc.addEventListener("keydonw", ()=>{
+        if(putImc.value != null){
+            style.top = '-20px';
+            style.fontsize = '12px';
+            style.color= 'rgb(223, 125, 50)';
+        }
+    });
+</script>
 </body>
 </html>
