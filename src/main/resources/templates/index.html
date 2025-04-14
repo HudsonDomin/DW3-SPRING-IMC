@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculo do IMC</title>
     <style>
-        /**{ padding: 0; }*/
-        body{ /*.inputOthers:focus ~ .inputCheck:checked{display: block;}*/
+        body{
             background-color: rgb(234, 234, 234);
             font-family: Arial, Helvetica, sans-serif;
             padding:0 !important;
             align-items: center;
         }
         .box {
-            /*position: absolute;*/
             background-color: white;
-            /*transform: translate(-50%, -50%);*/
             padding: 15px;
             border-radius: 15px;
             margin: auto;
             width: 600px;
-            /*top: 60%; left: 50%; width: 70%;*/
         }
         fieldset {color: white; border: 3px solid rgb(243, 172, 118); border-radius: 10px; }
         legend { z-index: 1;
@@ -28,7 +24,6 @@
             background-color: rgb(223, 125, 50);
             border:1px solid rgb(223, 125, 50);
             padding: 10px;
-            /*text-align: center;*/
             border-radius: 8px;
         }.inputBox { position: relative; color: rgb(223, 125, 50); }
         .inputImc {
@@ -42,8 +37,7 @@
         }.inputImc::placeholder { text-align: end; }
         .labelInput {
             position: absolute;
-            top: 0px;
-            left: 0px;
+            top: 0px;            left: 0px;
             pointer-events: none;
             transition: .5s;
         }.inputImc:focus ~ .labelInput,
@@ -53,12 +47,10 @@
              color: rgb(223, 125, 50);
          }
         .path {
-            width: 20px;
-            height: 20px;
+            width: 20px;            height: 20px;
             background-color: rgb(243, 172, 118);
             border-radius: 20px;
             text-align: center;
-            /*position: relative;*/
         }.th-1{ animation: move 12s linear infinite; }
         .th-2{ animation: move 15s linear infinite; }
         .th-3{ animation: move 18s linear infinite; }
