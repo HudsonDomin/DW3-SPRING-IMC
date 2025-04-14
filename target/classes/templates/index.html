@@ -83,6 +83,7 @@
 <div class="box">
     <form method="POST" action="/imc">
         <fieldset>
+            <button class="btnCalcular" onclick="getInfo()">info</button>
             <legend><b>Calculadora de IMC</b></legend>
             <br />
             <!--<p>Está é uma calculadora de Indice de Massa Corporal com objetivo de alertar na possibilidade de risco a saúde. Para isso solicitamos os seguites valores: Altura e Peso. Que serão utilizados para calcular o IMC do usuário.</p>-->
@@ -111,6 +112,10 @@
         input.addEventListener("keydown", () => {
         });
     });
+    function getInfo(){
+        let info = "Projeto DWIII - Spring IMC \nInsira os valores e pressione Calcular\nGrupo:\n\tCaio Matheus de Oliveira Pequeno\n\tPaulo Bispo Antônio de Sousa\n\tKayky Ferreira Alves\n\tHudson Henrique Domingues dos Santos";
+        alert(info);
+    }
 </script>
 
 </body>

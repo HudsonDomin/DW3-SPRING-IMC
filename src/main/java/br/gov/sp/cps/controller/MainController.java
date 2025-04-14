@@ -1,6 +1,6 @@
-package br.gov.sp.cps.Controller;
+package br.gov.sp.cps.controller;
 
-import br.gov.sp.cps.services.ImcService;
+import br.gov.sp.cps.service.ImcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping
-public class mainController {
+public class MainController {
 
     private Double peso = (Double) 0.0;
     private Double altura = (Double) 0.0;
