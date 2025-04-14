@@ -106,14 +106,12 @@
     </form>
 </div>
 <script>
-    let putImc = windows.document.getElementByClassName("inputImc");
-    putImc.addEventListener("keydonw", ()=>{
-        if(putImc.value != null){
-            style.top = '-20px';
-            style.fontsize = '12px';
-            style.color= 'rgb(223, 125, 50)';
-        }
+    let putImc = document.getElementsByClassName("inputImc");
+    Array.from(putImc).forEach(input => {
+        input.addEventListener("keydown", () => {
+        });
     });
 </script>
+
 </body>
 </html>
