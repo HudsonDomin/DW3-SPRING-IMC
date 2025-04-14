@@ -1,4 +1,4 @@
-package br.gov.sp.cps.services;
+package br.gov.sp.cps.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
